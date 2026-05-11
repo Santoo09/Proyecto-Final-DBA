@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "upme_solar/municipalities.schema.json",
+  "title": "PDET Municipality (DANE/MGN)",
+  "description": "Documento canonico de un municipio PDET para la coleccion `municipalities`.",
+  "type": "object",
+  "required": [
+    "divipola",
+    "mpio_cnmbr",
+    "dpto_ccdgo",
+    "dpto_cnmbr",
+    "is_pdet",
+    "pdet_subregion",
+    "geometry",
+    "area_km2",
+    "bbox",
+    "source",
+    "ingested_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_id": {},
+    "divipola": {
+      "type": "string",
+      "pattern": "^[0-9]{5}$",
+      "description": "Codigo DIVIPOLA completo (departamento + municipio)."
+    },
+    "mpio_cnmbr": { "type": "string", "minLength": 1 },
+    "dpto_ccdgo": { "type": "string", "pattern": "^[0-9]{2}$" },
+    "dpto_cnmbr": { "type": "string", "minLength": 1 },
+    "is_pdet": { "type": "boolean", "const": true },
+    "pdet_subregion": {
+      "type": "string",
+      "enum": [
+        "Alto Patia y Norte del Cauca",
+        "Arauca",
+        "Bajo Cauca y Nordeste Antioqueno",
+        "Catatumbo",
+        "Choco",
+        "Cuenca del Caguan y Piedemonte Caqueteno",
+        "Macarena - Guaviare",
+        "Montes de Maria",
+        "Pacifico Medio",
+        "Pacifico y Frontera Nariniense",
+        "Putumayo",
+        "Sierra Nevada - Perija - Zona Bananera",
+        "Sur de Bolivar",
+        "Sur de Cordoba",
+        "Sur del Tolima",
+        "Uraba Antioqueno"
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": { "enum": ["Polygon", "MultiPolygon"] },
+        "coordinates": { "type": "array" }
+      }
+    },
+    "area_km2": { "type": "number", "exclusiveMinimum": 0 },
+    "bbox": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "type": "number" }
+    },
+    "source": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string", "const": "DANE-MGN" },
+        "version": { "type": "string" }
+      }
+    },
+    "ingested_at": { "type": "string", "format": "date-time" }
+  }
+}

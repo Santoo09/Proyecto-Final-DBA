@@ -1,0 +1,12 @@
+{
+  "_id": "05001:microsoft",
+  "divipola": "05001",
+  "mpio_cnmbr": "Medellin",
+  "source": "microsoft",
+  "building_count": 218450,
+  "total_roof_area_m2": 21845300.5,
+  "mean_roof_area_m2": 100.0,
+  "median_roof_area_m2": 86.3,
+  "coverage_ratio": 0.0574,
+  "computed_at": "2026-06-05T14:00:00Z"
+}

@@ -1,0 +1,25 @@
+{
+  "divipola": "05001",
+  "mpio_cnmbr": "Medellin",
+  "dpto_ccdgo": "05",
+  "dpto_cnmbr": "Antioquia",
+  "is_pdet": true,
+  "pdet_subregion": "Bajo Cauca y Nordeste Antioqueno",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-75.6500, 6.2000],
+      [-75.5000, 6.2000],
+      [-75.5000, 6.3500],
+      [-75.6500, 6.3500],
+      [-75.6500, 6.2000]
+    ]]
+  },
+  "area_km2": 380.64,
+  "bbox": [-75.6500, 6.2000, -75.5000, 6.3500],
+  "source": {
+    "name": "DANE-MGN",
+    "version": "MGN2025"
+  },
+  "ingested_at": "2026-05-15T14:00:00Z"
+}

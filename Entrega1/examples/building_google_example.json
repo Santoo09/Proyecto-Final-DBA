@@ -1,0 +1,24 @@
+{
+  "source": "google",
+  "source_id": "67P6CHJF+8R",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-75.5621, 6.2451],
+      [-75.5621, 6.2459],
+      [-75.5613, 6.2459],
+      [-75.5613, 6.2451],
+      [-75.5621, 6.2451]
+    ]]
+  },
+  "centroid": {
+    "type": "Point",
+    "coordinates": [-75.5617, 6.2455]
+  },
+  "area_m2": 87.6,
+  "confidence": 0.92,
+  "height_m": null,
+  "municipality_divipola": "05001",
+  "ingested_at": "2026-05-22T14:05:00Z",
+  "ingest_batch": "google-2026w03-01"
+}

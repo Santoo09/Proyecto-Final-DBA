@@ -1,0 +1,24 @@
+{
+  "source": "microsoft",
+  "source_id": "021132330_487",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-75.5610, 6.2430],
+      [-75.5610, 6.2440],
+      [-75.5600, 6.2440],
+      [-75.5600, 6.2430],
+      [-75.5610, 6.2430]
+    ]]
+  },
+  "centroid": {
+    "type": "Point",
+    "coordinates": [-75.5605, 6.2435]
+  },
+  "area_m2": 112.4,
+  "confidence": null,
+  "height_m": 7.2,
+  "municipality_divipola": "05001",
+  "ingested_at": "2026-05-22T14:00:00Z",
+  "ingest_batch": "ms-2026w03-01"
+}

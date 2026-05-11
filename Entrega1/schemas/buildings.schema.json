@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "upme_solar/buildings.schema.json",
+  "title": "Building Footprint",
+  "description": "Huella de edificio proveniente de Microsoft, Google o TUM, ya filtrada a territorio PDET.",
+  "type": "object",
+  "required": [
+    "source",
+    "geometry",
+    "centroid",
+    "area_m2",
+    "municipality_divipola",
+    "ingested_at",
+    "ingest_batch"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_id": {},
+    "source": { "enum": ["microsoft", "google", "tum"] },
+    "source_id": { "type": ["string", "null"] },
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": { "enum": ["Polygon", "MultiPolygon"] },
+        "coordinates": { "type": "array" }
+      }
+    },
+    "centroid": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": { "const": "Point" },
+        "coordinates": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "number" }
+        }
+      }
+    },
+    "area_m2": { "type": "number", "exclusiveMinimum": 0 },
+    "confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "height_m": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "municipality_divipola": {
+      "type": "string",
+      "pattern": "^[0-9]{5}$"
+    },
+    "ingested_at": { "type": "string", "format": "date-time" },
+    "ingest_batch": { "type": "string", "minLength": 1 }
+  }
+}
