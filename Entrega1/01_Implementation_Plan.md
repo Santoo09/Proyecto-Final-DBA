@@ -149,24 +149,3 @@ El alcance de esta Entrega 1 se limita a establecer el cimiento técnico:
 | Diferencias de versión de MGN | Baja | Medio | Fijar la versión MGN2025 en el documento de modelado y registrar el `version_mgn` en cada municipio |
 | Inactividad de un miembro del equipo | Media | Alto | Tablero de tareas con asignación clara y commits frecuentes desde el día 1 (requisito explícito del proyecto) |
 
-## 8. Criterios de aceptación de la Entrega 1
-
-La entrega se considera completa si:
-
-- [x] La base `upme_solar` puede crearse desde cero ejecutando un único script.
-- [x] Las tres colecciones tienen validadores `$jsonSchema` activos.
-- [x] Existen índices `2dsphere` sobre los campos geométricos.
-- [x] Los documentos de ejemplo provistos pasan la validación al insertarse.
-- [x] La documentación de las secciones *Implementation Plan*, *Data Modeling*
-      y *Schema Design & Appropriateness* está en el repositorio y referenciada
-      desde el `README.md`.
-
-## 9. Próximos pasos (preparación Semana 2)
-
-1. Descargar `MGN2025-Colombia` desde el Geoportal del DANE.
-2. Cruzar el listado oficial de 170 municipios PDET (Decreto 893 de 2017) contra
-   los códigos DIVIPOLA del MGN.
-3. Cargar los polígonos municipales como documentos en la colección
-   `municipalities` siguiendo el esquema definido en esta entrega.
-4. Preparar la defensa en clase con: conteo de municipios cargados, validación
-   de geometrías y un mapa estático de cobertura.
