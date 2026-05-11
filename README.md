@@ -74,9 +74,6 @@ Entrega1/
 
 ## 5. Equipo y contribuciones
 
-> Documento del proyecto, sección 3: *"It is expected that ALL team members
-> contribute equally to every submission."*
-
 | Miembro | Responsabilidad principal en Entrega 1 |
 |---|---|
 | Santiago Suárez Gómez | Implementation Plan, cronograma, arquitectura, Data Modeling — fuentes externas y mapeos |
