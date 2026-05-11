@@ -1,0 +1,94 @@
+{
+  "entrega": "W2",
+  "tool_version": "0.2.0",
+  "started_at": "2026-05-11T19:25:36.840507Z",
+  "finished_at": "2026-05-11T19:25:53.897873Z",
+  "status": "success",
+  "source": {
+    "file": "C:\\Users\\sasug\\Desktop\\Proyecto Final DBA\\MGN2025_00_COLOMBIA.zip",
+    "size_bytes": 3481304151,
+    "sha256": "4c7d2f2c8860fcd25eb70e8710289035aba51389100eed4c4a6dd6e81d36cbc0",
+    "mgn_version": "MGN2025",
+    "downloaded_at": "2026-05-11T19:25:40.025665Z"
+  },
+  "crosscheck": {
+    "expected_count": 170,
+    "decreto_count": 170,
+    "mgn_pdet_count": 170,
+    "missing_in_mgn": [],
+    "extra_in_mgn": [],
+    "name_mismatches": [
+      {
+        "divipola": "19418",
+        "decreto": "López",
+        "mgn": "López De Micay"
+      },
+      {
+        "divipola": "19548",
+        "decreto": "Piendamó",
+        "mgn": "Piendamó - Tunía"
+      },
+      {
+        "divipola": "50711",
+        "decreto": "Vista Hermosa",
+        "mgn": "Vistahermosa"
+      },
+      {
+        "divipola": "70523",
+        "decreto": "San Antonio de Palmito",
+        "mgn": "Palmito"
+      },
+      {
+        "divipola": "70823",
+        "decreto": "Tolú Viejo",
+        "mgn": "San José De Toluviejo"
+      },
+      {
+        "divipola": "86573",
+        "decreto": "Leguízamo",
+        "mgn": "Puerto Leguízamo"
+      }
+    ]
+  },
+  "integrity": {
+    "total_in_pdet": 170,
+    "valid_geom": 170,
+    "repaired": 0,
+    "rejected": 0,
+    "repairs": [],
+    "rejected_ids": [],
+    "area_total_km2": 389182.03541959455
+  },
+  "load": {
+    "matched": 0,
+    "inserted": 170,
+    "updated": 0,
+    "upserted": 170,
+    "errors": []
+  },
+  "post_validation": {
+    "total": 170,
+    "duplicates": 0,
+    "missing_bbox": 0,
+    "subregions_covered": 16,
+    "area_total_km2": 389182.0354195946,
+    "ok": true
+  },
+  "performance_ms": {
+    "verify": 3184,
+    "crosscheck": 961,
+    "integrity": 4107,
+    "load": 8799,
+    "post_validate": 2
+  },
+  "errors": [],
+  "_id": "6a022d3062dbab2535438666",
+  "completeness": {
+    "decreto_count": 170,
+    "is_full_pdet": true,
+    "subregions_in_csv": 16,
+    "label": "complete"
+  },
+  "duration_seconds": 17.057,
+  "manifest_path": "C:\\Users\\sasug\\Desktop\\Proyecto Final DBA\\Entrega2\\manifests\\2026-05-11T19-25-36Z.json"
+}
