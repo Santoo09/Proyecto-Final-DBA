@@ -20,22 +20,9 @@ tiene un validador `$jsonSchema` y al menos un índice `2dsphere`.
 ## 2. Por qué MongoDB es apropiado
 
 El requisito del proyecto exige *NoSQL solutions, enabling scalable storage,
-efficient querying, and flexible spatial operations* (Project.pdf, §1). La
-siguiente tabla evalúa las opciones NoSQL más relevantes contra los requisitos
-reales del proyecto:
+efficient querying, and flexible spatial operations* (Project.pdf, §1).
 
-| Requisito del proyecto | MongoDB 7 | Cassandra | Redis | Couchbase | DynamoDB |
-|---|---|---|---|---|---|
-| GeoJSON nativo | ✅ Sí | ❌ No | ⚠️ Solo *geo-sets* sobre puntos | ⚠️ Limitado | ❌ No |
-| Índice geoespacial 2D/3D sobre polígonos | ✅ `2dsphere` | ❌ | ❌ (sólo puntos) | ⚠️ | ❌ |
-| `$geoIntersects`, `$geoWithin`, `$geoNear` | ✅ | ❌ | ⚠️ Sólo *radius* | ⚠️ | ❌ |
-| Agregaciones complejas (`$group`, `$lookup`) | ✅ Pipeline | ⚠️ Vía Spark | ❌ | ✅ N1QL | ⚠️ Limitado |
-| Esquema flexible (heterogeneidad MS vs Google) | ✅ Documentos JSON | ⚠️ Rígido | — | ✅ | ✅ |
-| Escala horizontal (*sharding*) | ✅ por *shard key* | ✅ | ⚠️ | ✅ | ✅ |
-| Comunidad y curva de aprendizaje | ✅ Madura | Media | Alta | Media | Atado a AWS |
-| Costo y portabilidad | ✅ Open Source | ✅ | ✅ | Comercial | Cerrado |
-
-**Conclusión:** MongoDB es la única opción que cubre los tres requisitos críticos
+ MongoDB es la única opción que cubre los tres requisitos críticos
 del problema (GeoJSON nativo + índice sobre polígonos + agregaciones espaciales)
 con licencia libre y sin atarse a un proveedor cloud. PostGIS (relacional) sería
 técnicamente superior para geoespacial, pero **viola el requisito NoSQL**.
@@ -271,15 +258,3 @@ materializar documentos.
   que hacerse en una etapa de post-proceso.
 - **Sharding no se activa en esta entrega.** Está documentado y se mantiene
   como opción si la Semana 3 muestra que un nodo único no escala.
-
-## 8. Checklist final del diseño
-
-- [x] Tres colecciones definidas con propósito claro y disjunto.
-- [x] GeoJSON en EPSG:4326 como representación canónica.
-- [x] Índices `2dsphere` sobre todos los campos espaciales relevantes.
-- [x] Índices compuestos que cubren las consultas críticas sin escaneo de colección.
-- [x] Validadores `$jsonSchema` que protegen la integridad estructural.
-- [x] Trazabilidad: cada documento conserva `source`, `version`, `ingested_at`.
-- [x] Denormalización justificada y acotada (`municipality_divipola`, `centroid`).
-- [x] Plan de escala documentado (*shard key* identificada).
-- [x] Limitaciones explícitas (sin doble engaño al cliente).
