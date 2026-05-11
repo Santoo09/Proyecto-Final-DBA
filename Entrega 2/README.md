@@ -2,7 +2,6 @@
 
 **Curso:** Database Administration
 **Proyecto Final:** Estimación del Potencial Solar en Techos de Municipios PDET — UPME
-**Defensa:** Semana 2 — antes de las 2:00 pm en clase
 
 ---
 
